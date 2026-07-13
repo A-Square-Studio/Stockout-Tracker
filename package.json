@@ -7,7 +7,7 @@
     "dev": "concurrently -n \"api,web\" -c \"cyan,magenta\" \"tsx --env-file=.env server/index.ts\" \"vite\"",
     "dev:ui": "vite",
     "build": "tsc -b && vite build",
-    "start": "NODE_ENV=production tsx server/index.ts",
+    "start": "cross-env NODE_ENV=production tsx --env-file=.env server/index.ts",
     "preview": "vite preview",
     "lint": "oxlint"
   },
@@ -46,6 +46,7 @@
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.3",
+    "cross-env": "^10.1.0",
     "oxlint": "^1.72.0",
     "typescript": "~6.0.2",
     "vite": "^8.1.3"
