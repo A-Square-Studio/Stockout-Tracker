@@ -1,0 +1,201 @@
+.wrap {
+  padding: 28px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ── Page header ── */
+.pageHead { display: flex; flex-direction: column; gap: 6px; }
+.pageTitle { font-size: 20px; font-weight: 700; color: var(--text); margin: 0; }
+.pageBlurb { font-size: 13px; color: var(--muted); margin: 0; line-height: 1.5; }
+
+/* ── Grid ── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(440px, 1fr));
+  gap: 16px;
+}
+
+/* ── Table card ── */
+.card {
+  background: var(--bg2);
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* colour accent on top border */
+.card.blue   { border-top: 3px solid var(--teal); }
+.card.orange { border-top: 3px solid var(--amber); }
+.card.purple { border-top: 3px solid var(--purple); }
+.card.grey   { border-top: 3px solid var(--dim); }
+
+/* ── Card head ── */
+.cardHead {
+  padding: 14px 16px 12px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  border-bottom: 0.5px solid var(--border);
+}
+
+.tableName {
+  font-family: var(--mono);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.tsType {
+  font-size: 11px;
+  color: var(--dim);
+  margin-top: 3px;
+  font-family: var(--mono);
+}
+
+.dbBadge {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  padding: 2px 7px;
+  border-radius: 20px;
+  background: var(--bg3);
+  border: 0.5px solid var(--border2);
+  color: var(--dim);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ── Fields ── */
+.fieldsWrap { padding: 12px 16px; border-bottom: 0.5px solid var(--border); }
+
+.fieldsLabel {
+  font-size: 9px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--dim);
+  margin-bottom: 8px;
+}
+
+.fields { border-collapse: collapse; width: 100%; }
+
+.fieldRow { border-bottom: 0.5px solid var(--border); }
+.fieldRow:last-child { border-bottom: none; }
+
+.fieldMeta { padding: 5px 8px 5px 0; width: 32px; vertical-align: middle; }
+.fieldName {
+  padding: 5px 12px 5px 0;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text);
+  vertical-align: middle;
+}
+.fieldType {
+  padding: 5px 0;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--muted);
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.fieldNote {
+  padding: 5px 0 5px 12px;
+  font-size: 11px;
+  color: var(--dim);
+  vertical-align: middle;
+  font-style: italic;
+}
+
+.tagPk, .tagUq {
+  display: inline-block;
+  font-size: 9px;
+  font-weight: 700;
+  padding: 1px 5px;
+  border-radius: 4px;
+  letter-spacing: .04em;
+}
+.tagPk { background: color-mix(in srgb, var(--amber) 18%, transparent); color: var(--amber); border: 0.5px solid var(--amber); }
+.tagUq { background: color-mix(in srgb, var(--purple) 18%, transparent); color: var(--purple); border: 0.5px solid var(--purple); }
+.tagEmpty { display: inline-block; width: 24px; }
+
+/* ── Endpoints ── */
+.endpointsWrap { padding: 12px 16px; }
+
+.endpoints { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 4px; }
+
+.endpoint { display: flex; align-items: baseline; gap: 8px; }
+
+.method {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 4px;
+  min-width: 52px;
+  text-align: center;
+  flex-shrink: 0;
+}
+.methodGET    { background: color-mix(in srgb, var(--teal)   20%, transparent); color: var(--teal);   border: 0.5px solid var(--teal); }
+.methodPOST   { background: color-mix(in srgb, var(--amber)  20%, transparent); color: var(--amber);  border: 0.5px solid var(--amber); }
+.methodPUT    { background: color-mix(in srgb, var(--purple) 20%, transparent); color: var(--purple); border: 0.5px solid var(--purple); }
+.methodDELETE { background: color-mix(in srgb, var(--red)    20%, transparent); color: var(--red);    border: 0.5px solid var(--red); }
+
+.path { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+
+/* ── Relationship note ── */
+.relNote {
+  background: var(--bg2);
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+}
+.relNoteHead {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--dim);
+  margin-bottom: 10px;
+}
+.relList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.relList li {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+  padding-left: 14px;
+  position: relative;
+}
+.relList li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--dim);
+}
+.relFrom {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text);
+}
+.relList code {
+  font-family: var(--mono);
+  font-size: 12px;
+  background: var(--bg3);
+  padding: 1px 5px;
+  border-radius: 4px;
+  border: 0.5px solid var(--border);
+  color: var(--text);
+}

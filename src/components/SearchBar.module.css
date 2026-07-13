@@ -1,0 +1,175 @@
+.wrap { position: relative; width: 100%; max-width: 640px; }
+
+.row { display: flex; gap: 8px; }
+
+.inputWrap {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  position: absolute;
+  left: 10px;
+  color: var(--muted);
+  pointer-events: none;
+}
+
+.input {
+  width: 100%;
+  padding-left: 32px !important;
+  padding-right: 32px !important;
+}
+
+.clear {
+  position: absolute;
+  right: 6px;
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  padding: 4px;
+  display: flex;
+  align-items: center;
+}
+.clear:hover { background: var(--bg3); color: var(--text); }
+
+.sugs {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 80px;
+  background: var(--bg2);
+  border: 0.5px solid var(--border2);
+  border-radius: var(--radius);
+  z-index: 50;
+  overflow: hidden;
+  list-style: none;
+}
+
+.sugItem {
+  padding: 9px 14px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-bottom: 0.5px solid var(--border);
+}
+.sugItem:last-child { border-bottom: none; }
+.sugItem:hover, .sugActive { background: var(--bg3); }
+
+.sugMain { display: flex; gap: 12px; align-items: baseline; }
+.sugId { font-family: var(--mono); font-size: 12px; font-weight: 500; color: var(--teal); min-width: 80px; }
+.sugName { font-size: 12px; color: var(--muted); }
+.sugVia { font-size: 11px; color: var(--dim); padding-left: 2px; }
+.sugVia::before { content: '↳ '; }
+
+.card {
+  margin-top: 12px;
+  background: var(--bg2);
+  border: 0.5px solid var(--border2);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.cardTop {
+  padding: 14px 16px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.cardId { font-family: var(--mono); font-size: 15px; font-weight: 500; color: var(--text); }
+.cardName { font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+.badgeOut {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: var(--red-bg);
+  color: var(--red);
+  border: 0.5px solid rgba(226,75,74,0.3);
+  white-space: nowrap;
+}
+
+.badgeIn {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: var(--teal-bg);
+  color: var(--teal);
+  border: 0.5px solid var(--teal-dim);
+}
+
+.hr { height: 0.5px; background: var(--border); }
+
+.meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.metaCell {
+  padding: 11px 16px;
+  border-right: 0.5px solid var(--border);
+  border-bottom: 0.5px solid var(--border);
+}
+.metaCell:nth-child(2n) { border-right: none; }
+.metaCell:nth-child(3), .metaCell:nth-child(4) { border-bottom: none; }
+
+.metaLabel { font-size: 10px; text-transform: uppercase; letter-spacing: .06em; color: var(--dim); margin-bottom: 3px; }
+.metaValue { font-size: 13px; font-weight: 500; color: var(--text); display: flex; align-items: center; gap: 6px; }
+
+.avatar {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  font-weight: 500;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.tops { padding: 12px 16px; }
+.topsLabel { font-size: 10px; text-transform: uppercase; letter-spacing: .06em; color: var(--dim); margin-bottom: 8px; }
+.pills { display: flex; flex-wrap: wrap; gap: 5px; }
+
+.pill {
+  font-family: var(--mono);
+  font-size: 11px;
+  padding: 3px 9px;
+  border-radius: 20px;
+  border: 0.5px solid var(--border2);
+  background: var(--bg3);
+  color: var(--muted);
+}
+
+.pillSelf {
+  background: var(--purple-bg);
+  border-color: var(--purple);
+  color: var(--purple);
+}
+
+.pillMatch {
+  background: color-mix(in srgb, var(--teal) 15%, transparent);
+  border-color: var(--teal);
+  color: var(--teal);
+}
+
+.notFound {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: var(--bg2);
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 13px;
+  color: var(--muted);
+}

@@ -1,0 +1,151 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  height: 52px;
+  border-bottom: 0.5px solid var(--border);
+  background: var(--bg2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  flex-shrink: 0;
+  gap: 8px;
+  min-width: 0;
+}
+
+/* ── Brand ── */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  flex-shrink: 1;
+  overflow: hidden;
+}
+
+.pulse {
+  color: var(--teal);
+  flex-shrink: 0;
+  animation: blink 2s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+
+.title {
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.badge {
+  font-family: var(--mono);
+  font-size: 11px;
+  background: var(--teal-bg);
+  color: var(--teal);
+  border: 0.5px solid var(--teal-dim);
+  border-radius: 20px;
+  padding: 1px 8px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.updated {
+  font-size: 12px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+/* ── Nav ── */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.nav button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  padding: 5px 12px;
+  background: transparent;
+  border-color: transparent;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.nav button:hover {
+  background: var(--bg3);
+  border-color: var(--border);
+  color: var(--text);
+}
+
+.nav button.active {
+  background: var(--bg3);
+  border-color: var(--border2);
+  color: var(--text);
+}
+
+.label { /* text portion of each nav button */ }
+
+.divider {
+  width: 0.5px;
+  height: 20px;
+  background: var(--border2);
+  margin: 0 2px;
+  align-self: center;
+  flex-shrink: 0;
+}
+
+.logoutBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--muted);
+  background: transparent;
+  border-color: transparent;
+  padding: 5px 12px;
+  white-space: nowrap;
+}
+.logoutBtn:hover { color: var(--red); background: var(--red-bg); border-color: transparent; }
+
+.themeBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 8px;
+  background: transparent;
+  border-color: transparent;
+  color: var(--muted);
+}
+.themeBtn:hover { background: var(--bg3); border-color: var(--border); color: var(--text); }
+
+/* ── Mobile ── */
+@media (max-width: 600px) {
+  .header { padding: 0 12px; }
+
+  /* Hide "Stockout Tracker" text, keep icon + badge */
+  .title   { display: none; }
+  /* Hide "Updated …" timestamp */
+  .updated { display: none; }
+
+  /* Nav buttons: icon only */
+  .label { display: none; }
+
+  .nav button {
+    padding: 6px 8px;
+    gap: 0;
+  }
+
+  .logoutBtn {
+    padding: 6px 8px;
+    gap: 0;
+  }
+}
