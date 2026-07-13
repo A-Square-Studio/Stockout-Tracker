@@ -6,7 +6,7 @@ An internal supply-chain tool for tracking current and potential future stockout
 
 - **Frontend:** React 19 + TypeScript, Vite 8, PapaParse (CSV), lucide-react (icons)
 - **Backend:** Express 5 (Node.js / tsx), running on port 3000 in development
-- **Database:** PostgreSQL (Replit managed) — all data persists server-side
+- **Database:** PostgreSQL — all data persists server-side
 - **Auth:** bcrypt-hashed passwords, express-session with HTTP-only cookies
 - **Email:** Nodemailer (SMTP) for welcome emails when creating admin accounts
 
@@ -18,7 +18,7 @@ npm run build     # builds the React app into dist/
 npm start         # production: Express on port 5000 serving dist/
 ```
 
-The workflow **Start application** (`npm run dev`) handles dev startup automatically on Replit.
+The workflow **Start application** (`npm run dev`).
 
 ## Environment secrets required
 
@@ -64,7 +64,7 @@ The workflow **Start application** (`npm run dev`) handles dev startup automatic
 ## Deployment
 
 - Site: [stockout-tracker.com](https://stockout-tracker.com)
-- Hosted on Replit (Autoscale deployment)
+- Hosted on Network Solutions
 - Run `npm run build` then publish — Express serves the built `dist/` folder in production
 
 ## Future features
